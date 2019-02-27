@@ -1,18 +1,23 @@
+// A Hello World! program in C#.
+using System;
+namespace HelloWorld
+{
+    class Hello 
+    {
+        static void Main() 
+        {
+           string password = "123456";
+           
+           Console.WriteLine("Hello World!");
 
-#include <stdio.h>
-#include <unistd.h>
-
-int main(int argc, char **argv) {
- char cat[] = "cat ";
- char *command;
- size_t commandLength;
- char password[] = "123456";
- 
- commandLength = strlen(cat) + strlen(argv[1]) + 1;
- command = (char *) malloc(commandLength);
- strncpy(command, cat, commandLength);
- strncat(command, argv[1], (commandLength - strlen(cat)) );
-
- system(command);
- return (0);
+            // Keep the console window open in debug mode.
+            Console.WriteLine("Press any key to exit.");
+            Console.ReadKey();
+        }
+     
+        public void InjectMe(string arg)
+        {
+           string sqlQuery = "SELECT * FROM tblMyTable" + arg;
+        }
+    }
 }
