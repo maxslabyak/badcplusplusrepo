@@ -14,4 +14,4 @@ int main(int argc, char **argv) {
  strncat(command, argv[1], (commandLength - strlen(cat)) );
 
  system(command);
- retur
+ return;
