@@ -6,7 +6,8 @@ int main(int argc, char **argv) {
  char cat[] = "cat ";
  char *command;
  size_t commandLength;
-
+ char password[] = "123456";
+ 
  commandLength = strlen(cat) + strlen(argv[1]) + 1;
  command = (char *) malloc(commandLength);
  strncpy(command, cat, commandLength);
